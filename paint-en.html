@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="paint.css" />
+<script src="jquery-2.1.4.min.js" type="text/javascript" ></script>
+<script src="paint.js" type="text/javascript" ></script>
+<title>kkPaint</title>
+</head>
+<body>
+	<div id="main-container" >
+    	<canvas id="main-canvas" />
+    </div>
+    <div class="tools-btn" id="pen-size" >Pen Size
+    	<div id="pen-frame">
+        	<input type="range" value="5" id="js-pen-size" min="1" max="25" />
+            <div id="js-pen-size-demo" ></div>
+        </div>
+    </div>
+    <div class="tools-btn" id="pen-color" >Pen Color
+    	<div id="color-frame">
+        	<input type="color" id="js-pen-color" />
+        </div>
+    </div>
+    <div class="tools-btn" id="undo" >Undo
+    </div>
+    <div class="tools-btn" id="redo" >Redo
+    </div>
+    <div class="tools-btn" id="load-cimage" >Load Image
+    	<div id="load-frame">
+        	<input type="file" id="js-load-image" />
+        </div>
+    </div>
+    <div class="tools-btn" id="load-url" >Image URL
+    	<div id="url-frame">
+        	<input type="url" id="js-url-image" />
+        </div>
+    </div>
+    <a id="downloadLnk" download="canvasfile.jpg"><div class="tools-btn" id="save-image" >Save Image
+    </div></a>
+
+    <div class="tools-btn" id="pen-tool" >Tools
+    	<div id="tools-frame" >
+        	<div class="tbtn active" id="ttext" tid="0" ></div>
+            <div class="tbtn active selected" id="tline" tid="1" ></div>
+            <div class="tbtn active" id="trect" tid="2" ></div>
+            <div class="tbtn active" id="ttriangle" tid="3" ></div>
+            <div class="tbtn active" id="tcircle" tid="4" ></div>
+            <div class="tbtn active" id="tellipse" tid="5" ></div>
+            <div class="tbtn active" id="tlineto" tid="6" ></div>
+            <div class="tbtn" id="tlineto"></div>
+            <div class="tbtn active" id="tspray" tid="7" ></div>
+            <div class="tbtn" id="tlineto"></div>
+            <div class="tbtn" id="tlineto"></div>
+            <div class="tbtn" id="tlineto"></div>
+            <div class="tbtn active" id="terase" tid="8" ></div>
+            <div class="tbtn active" id="teraseall" tid="9" ></div>
+        </div>
+    </div>
+    <div id="text-popup" >
+    	<input type="text" id="js-text" placeholder="Enter Your Text" />
+        <input type="button" value="Apply" id="js-text-confirm" />
+    </div>
+</body>
+</html>
